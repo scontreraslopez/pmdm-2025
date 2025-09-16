@@ -1,6 +1,6 @@
 # T01-Tecnologías para aplicaciones en dispositivos móviles
 
-# Desarrollo de aplicaciones Móviles – Metodologías de desarrollo
+## Desarrollo de aplicaciones Móviles – Metodologías de desarrollo
 
 El desarrollo de aplicaciones móviles, como cualquier proyecto de software, sigue una serie de etapas bien definidas. Sin embargo, no existe un único camino; la metodología "elegida" (a veces impuesta) depende del tipo de proyecto, el cliente y la cultura de la empresa.
 
@@ -10,22 +10,21 @@ El desarrollo de aplicaciones móviles, como proyecto de software complejo, comp
 
 Es el enfoque tradicional y **secuencial**. Las fases del proyecto (análisis, diseño, desarrollo, pruebas, despliegue) ocurren una detrás de otra, y no se puede avanzar a la siguiente sin haber completado la anterior. Aunque fue un estándar, hoy es poco práctico para el desarrollo móvil por su rigidez y su incapacidad para adaptarse a los cambios rápidos que exige el mercado.
 
-### Reflexión
+**Reflexión:**
 
-- ¿Qué problemas identificáis en el modelo en cascada para el desarrollo de una app móvil?
-- A pesar de sus inconvenientes, ¿qué ventaja fundamental creéis que podría ofrecer este modelo en la gestión de un proyecto?
+  * ¿Qué problemas identificáis en el modelo en cascada para el desarrollo de una app móvil?
+  * A pesar de sus inconvenientes, ¿qué ventaja fundamental creéis que podría ofrecer este modelo en la gestión de un proyecto?
 
 ### Metodologías Ágiles (Scrum)
 
 Este es el enfoque **iterativo e incremental**, y el estándar de facto en el desarrollo móvil. En lugar de un único gran lanzamiento, el trabajo se divide en ciclos cortos llamados **Sprints** (de 1 a 4 semanas), al final de los cuales se entrega una versión funcional del software. Esto permite lanzar un **Producto Mínimo Viable (MVP)** rápidamente en las tiendas de aplicaciones y mejorarlo continuamente con el feedback real de los usuarios.
 
-Reflexión:
+**Reflexión:**
 
-- Si una gran empresa os contrata para desarrollar una app con un presupuesto cerrado, ¿qué conflicto surge al aplicar Agile y cómo lo gestionaríais?
-- Si Agile puede parecer un 'cheque en blanco' para el cliente, ¿qué argumentos usaríais para convencerle de sus ventajas frente a la aparente seguridad de un presupuesto cerrado?
-
-- ¿Cómo evita el equipo que el cliente añada funcionalidades sin control en cada sprint, desvirtuando el proyecto y los plazos?
-- En Agile, si el alcance es flexible, ¿cómo demostramos al cliente que el proyecto es un éxito y que su inversión está siendo rentable?
+  * Si una gran empresa os contrata para desarrollar una app con un presupuesto cerrado, ¿qué conflicto surge al aplicar Agile y cómo lo gestionaríais?
+  * Si Agile puede parecer un 'cheque en blanco' para el cliente, ¿qué argumentos usaríais para convencerle de sus ventajas frente a la aparente seguridad de un presupuesto cerrado?
+  * ¿Cómo evita el equipo que el cliente añada funcionalidades sin control en cada sprint, desvirtuando el proyecto y los plazos?
+  * En Agile, si el alcance es flexible, ¿cómo demostramos al cliente que el proyecto es un éxito y que su inversión está siendo rentable?
 
 ### El Híbrido "Scrummerfall" y similares
 
@@ -35,12 +34,10 @@ Otro híbrido popular es **"Scrumban"**, que mezcla la estructura de roles y reu
 
 Nótese que términos como "**Scrummerfall**" pueden ser peyorativos, pero representan el hecho de que la realidad es tozuda y muchas veces toca acomodar soluciones de compromiso para que el trabajo salga adelante.
 
-Reflexión:
+**Reflexión:**
 
-- Viendo que estos modelos no son "ni una cosa ni la otra", ¿qué problemas del mundo real creéis que intentan solucionar los enfoques híbridos?
-- Un equipo que intenta trabajar con Sprints (Agile) dentro de una organización que exige un plan cerrado con meses de antelación (Waterfall) puede sufrir mucha frustración. ¿Qué conflictos o tensiones creéis que pueden surgir entre los desarrolladores y la gerencia en un entorno así?
-
-[Android Mobile App Developer Tools](https://developer.android.com/) – Android Developers
+  * Viendo que estos modelos no son "ni una cosa ni la otra", ¿qué problemas del mundo real creéis que intentan solucionar los enfoques híbridos?
+  * Un equipo que intenta trabajar con Sprints (Agile) dentro de una organización que exige un plan cerrado con meses de antelación (Waterfall) puede sufrir mucha frustración. ¿Qué conflictos o tensiones creéis que pueden surgir entre los desarrolladores y la gerencia en un entorno así?
 
 ## Limitaciones que plantea la ejecución de aplicaciones en dispositivos móviles
 
@@ -58,7 +55,7 @@ Un ordenador de sobremesa o portátil suele usar procesadores con arquitectura *
 
 Aunque como desarrolladores no escribimos directamente en ensamblador, entender esta diferencia es clave. Un código limpio y optimizado, que descompone las tareas en pasos sencillos, se alineará mucho mejor con la filosofía del hardware para el que estamos programando, resultando en una app más fluida y que consume menos batería.
 
-#### **3. La Conectividad Intermitente**
+### **3. La Conectividad Intermitente**
 
 Un móvil está en constante movimiento, pasando de una red Wi-Fi de alta velocidad a 5G, 4G, o a una **desconexión total** al entrar en un túnel. Una aplicación que asume una conexión estable está destinada a fallar, creando una experiencia de usuario frustrante. Por ello, debemos diseñar con una mentalidad **offline-first**: guardar datos en local (caché) para que la app siga siendo funcional sin conexión y sincronizar la información cuando la conexión se restablezca.
 
@@ -72,150 +69,138 @@ Los móviles son inherentemente más inseguros: se conectan a redes Wi-Fi públi
 
 ### **5. El Laberinto de la Fragmentación**
 
-No existe "un" móvil Android; existen miles de modelos con diferentes tamaños de pantalla, resoluciones, procesadores y versiones del sistema operativo. Esta **fragmentación** es un enorme desafío, ya que una interfaz que se ve perfecta en un dispositivo puede estar rota en otro. La solución es crear interfaces de usuario **adaptables (responsive)** que se ajusten a cualquier pantalla y programar de forma defensiva, comprobando siempre la versión del SO antes de usar una función específica y ofreciendo alternativas para las más antiguas.
+No existe "un" móvil Android; existen miles de modelos con diferentes tamaños de pantalla, resoluciones, procesadores y versiones del sistema operativo. Esta **fragmentación** es un enorme desafío, ya que una interfaz que se ve perfecta en un dispositivo puede estar rota en otro.
+
+La solución es crear interfaces de usuario **adaptables (responsive)** que se ajusten a cualquier pantalla y programar de forma defensiva, comprobando siempre la versión del SO antes de usar una función específica y ofreciendo alternativas para las más antiguas.
 
 ### **6. La Batalla por la Relevancia**
 
 El espacio en el móvil de un usuario es un terreno muy cotizado y la gente es reacia a instalar nuevas aplicaciones si no ven un valor claro. Nuestra app compite contra la saturación, el consumo de datos de la descarga y el espacio de almacenamiento que ocupará. Por ello, debe ofrecer un **valor añadido innegable** que justifique su instalación frente a una web móvil (p. ej., acceso al hardware, notificaciones avanzadas, mejor rendimiento) y debemos optimizar al máximo su tamaño para que la descarga sea lo más ligera posible.
 
-[Coding conventions | Kotlin Documentation](https://kotlinlang.org/docs/coding-conventions.html) [Android Mobile App Developer Tools](https://developer.android.com/) – Android Developers
-
-### Checklist:
-
-- Java -version
-- Git -version
-- Gh-version
-
-Hacemos un HelloWorld.kt y lo ejecutamos
-
-### Tabla de Convenciones de Nomenclatura en Kotlin
-
-| Elemento                         | Convención           | Ejemplo                                                           |
-|----------------------------------|----------------------|-------------------------------------------------------------------|
-| Clases, Interfaces y<br>Archivos | PascalCase           | class UserProfile<br>interface<br>ClickListener<br>UserProfile.kt |
-| Funciones y Variables            | camelCase            | fun getUserName()<br>val userAge                                  |
-| Constantes (const<br>val)        | SNAKE_CASE_UPPERCASE | const val MAX_RETRIES = 3                                         |
+-----
 
 ## Tecnologías disponibles
 
 En el desarrollo de aplicaciones móviles, han surgido diversas tecnologías para adaptarse a las necesidades de cada proyecto. Tradicionalmente, los creadores de los sistemas operativos (como Android e iOS) definen un lenguaje y un entorno de desarrollo específicos para su plataforma, lo que se conoce como **desarrollo nativo**. Sin embargo, en los últimos años han ganado popularidad diversos *frameworks* que permiten el **desarrollo multiplataforma**, facilitando la creación de aplicaciones para diferentes sistemas operativos a partir de una base de código compartida.
 
-El siguiente vídeo en los primeros 10 minutos te explica breve y claro las opciones actuales para el desarrollo para dispositivos móviles:
+*El siguiente vídeo ofrece un resumen claro de las opciones actuales:*
+[https://www.youtube.com/watch?v=-pWSQYpkkjk](https://www.youtube.com/watch?v=-pWSQYpkkjk)
 
-<https://www.youtube.com/watch?v=-pWSQYpkkjk>
+### **Clasificación Arquitectónica de las Tecnologías de Desarrollo Móvil**
 
+Para analizar las distintas estrategias de desarrollo de aplicaciones móviles, es fundamental clasificarlas según cómo el código de la aplicación interactúa con el sistema operativo y cómo se renderiza la interfaz de usuario. Así, distinguimos tres paradigmas fundamentales:
 
----
+**1. Desarrollo Nativo**
+Consiste en la utilización del **Software Development Kit (SDK)** oficial, el lenguaje de programación y el paradigma de diseño estipulado por el proveedor de la plataforma. Este enfoque garantiza el acceso directo y de máximo rendimiento a todas las APIs del sistema operativo y las capacidades del hardware. El resultado es una aplicación que ofrece la mayor fidelidad en términos de rendimiento, comportamiento y estética (UI/UX) con respecto a la plataforma de destino.
 
-# Apuntes de Clase: El Ecosistema del Desarrollo Móvil
+  * **Android 🤖:**
+      * **Lenguajes:** **Kotlin** (recomendado oficialmente) y Java (legacy).
+      * **Entorno de Desarrollo (IDE):** Android Studio.
+  * **iOS (iPhone) 🍏:**
+      * **Lenguajes:** **Swift** (para las aplicaciones modernas) y Objective-C (legacy).
+      * **Entorno de Desarrollo (IDE):** Xcode.
 
-## 1. Introducción: Los Dos Grandes Paradigmas
+En un proyecto nativo que se plantease para ambas plataformas, supondría **dos bases de código completamente separadas**. Esto implica que el flujo de trabajo, las versiones y los repositorios en el control de versiones (como Git) se gestionan de manera independiente.
 
-En el desarrollo de aplicaciones para dispositivos móviles, nos encontramos ante una decisión fundamental que define la arquitectura, el coste y el rendimiento de nuestro proyecto. Esta decisión se resume en dos grandes enfoques: el **desarrollo nativo** y el **desarrollo multiplataforma**.
+**Ventajas clave del desarrollo nativo:**
 
-El objetivo de esta unidad es comprender las características, ventajas y desventajas de cada uno, para que, como futuros desarrolladores, podáis tomar la decisión más informada para cada proyecto. [cite_start]Este conocimiento es clave para cumplir con el Resultado de Aprendizaje 1 (RA1) de nuestro módulo: **"Aplica tecnologías de desarrollo para dispositivos móviles evaluando sus características y capacidades"**[cite: 98, 267].
+  * ✅ **Máximo Rendimiento:** Son las aplicaciones más rápidas, eficientes y que mejor gestionan la batería y la memoria.
+  * ✅ **Acceso Total:** Tienen acceso inmediato y completo a todas las novedades del sistema operativo y del hardware (cámaras, sensores, etc.).
+  * ✅ **Seguridad y Soporte:** Cuentan con el soporte directo de Apple y Google, garantizando la máxima seguridad y estabilidad.
+  * ✅ **Experiencia de Usuario (UX) Perfecta:** Se integran visualmente a la perfección con el sistema, ofreciendo la experiencia a la que el usuario está acostumbrado.
 
----
+**2. Estrategias Multiplataforma**
+Este es un término paraguas que engloba a todas las tecnologías cuyo objetivo es maximizar la reutilización de código a través de diferentes sistemas operativos. Un **mismo código y lenguaje de programación** puede compilarse para ejecutarse en dos o más plataformas diferentes, buscando un ahorro de tiempo y recursos. En este caso, gestionamos un **único proyecto** para todas las plataformas. Es un enfoque similar al Java "Write Once, Run Anywhere" (WORA) de hace años, pero adaptado a las necesidades y limitaciones del entorno móvil.Sin embargo, se subdividen en arquitecturas muy diferentes:
 
-## 2. Desarrollo de Aplicaciones Nativas
+* **a) Enfoque Híbrido (Basado en `WebView`):** La aplicación se construye utilizando tecnologías web estándar (HTML, CSS, JavaScript) y se empaqueta dentro de un contenedor nativo. Este contenedor expone un componente `WebView` (un motor de navegador sin chrome) que renderiza la aplicación. La comunicación con las funcionalidades nativas del dispositivo (cámara, GPS) se realiza a través de un "puente" de JavaScript.
+    * *Ejemplos representativos:* Apache Cordova, Ionic.
 
-Las aplicaciones nativas son aquellas que se implementan en el lenguaje y con las herramientas específicas que facilita el fabricante de la plataforma. Actualmente, el mercado está dominado por Android (Google) e iOS (Apple).
-
-### **Android 🤖**
-
-* **Lenguajes:** **Kotlin** (recomendado oficialmente) y Java.
-* **Entorno de Desarrollo (IDE):** Android Studio.
-
-### **iOS (iPhone) 🍏**
-
-* **Lenguajes:** **Swift** (para las aplicaciones modernas) y Objective-C (en aplicaciones más antiguas).
-* **Entorno de Desarrollo (IDE):** Xcode.
-
-
-
-En un proyecto nativo, tendremos **dos bases de código completamente separadas**, una para cada sistema operativo. Esto implica que el flujo de trabajo, las versiones y los repositorios en el control de versiones (como Git) se gestionan de manera independiente.
-
----
-
-## 3. Desarrollo de Aplicaciones Multiplataforma (Híbridas)
-
-Las aplicaciones multiplataforma (a menudo llamadas híbridas en un sentido amplio) son aquellas en las que un **mismo código y lenguaje de programación** puede compilarse para ejecutarse en dos o más plataformas diferentes, buscando un ahorro de tiempo y recursos. En este caso, gestionamos un **único proyecto** para todas las plataformas.
+* **b) Enfoque Compilado o con Renderizado Nativo:** El código fuente, escrito en un lenguaje no nativo, se traduce a elementos nativos en tiempo de compilación o se utiliza un motor de renderizado de alto rendimiento para dibujar la interfaz directamente sobre un canvas de la plataforma. Este paradigma evita el cuello de botella de rendimiento de la `WebView`.
+    * **Compilado a Widgets Nativos:** El framework actúa como un traductor que convierte los componentes de UI definidos en el código (p. ej., en JavaScript) a sus equivalentes 100% nativos en cada plataforma. *Ejemplo representativo:* React Native.
+    * **Renderizado Propio:** El framework incluye su propio motor gráfico que se encarga de "pintar" cada píxel de la interfaz de usuario. Esto ofrece una consistencia visual máxima entre plataformas. *Ejemplo representativo:* Flutter (con su motor Skia).
 
 
-### 3.1. Tipos de Enfoques Multiplataforma
+**3. Aplicaciones Web Móviles y Progresivas (PWA)**
+Esta categoría opera fundamentalmente dentro del **sandbox del navegador web** y no requiere instalación a través de una tienda de aplicaciones.
 
-Aunque a veces se agrupan bajo el término "híbrido", existen varias tecnologías con funcionamientos muy distintos:
+* **a) Aplicación Web Móvil (WebApp):** Es un sitio web con un diseño *responsive* que se adapta a las pantallas de los dispositivos móviles. Su funcionalidad está intrínsecamente ligada a la del navegador y requiere una conexión a internet activa.
 
-#### **Aplicaciones Web Responsive (WebApps)**
+* **b) Aplicación Web Progresiva (PWA):** Es una evolución de la WebApp que utiliza APIs modernas del navegador (como *Service Workers* y el *Web App Manifest*) para proporcionar una experiencia similar a la de una aplicación nativa. Ofrece capacidades como el funcionamiento sin conexión, notificaciones push y la posibilidad de ser "añadida a la pantalla de inicio". Aunque una PWA puede ser encapsulada en una *Trusted Web Activity (TWA)* para su distribución en la Google Play Store, su arquitectura fundamental sigue residiendo y ejecutándose en el entorno del navegador, lo que la sitúa en la frontera entre una WebApp avanzada y una aplicación híbrida. El gran problema de las PWAs es su **baja descubribilidad**. El aviso de "Añadir a pantalla de inicio" es a menudo ignorado o no entendido por los usuarios, que están acostumbrados al modelo centralizado de las App Stores para descubrir e instalar aplicaciones.
 
-No son aplicaciones instalables. Se basan en tecnología web estándar (HTML, CSS, JavaScript) y se ejecutan en el navegador del dispositivo. Su diseño *responsive* permite que la interfaz se adapte visualmente al tamaño de la pantalla.
+### **Tabla Comparativa de Estrategias de Desarrollo Móvil**
 
-#### **Aplicaciones Híbridas (Basadas en WebView)**
+| Característica 📋 | Aplicaciones Nativas 👑 | Aplicaciones Multiplataforma 🛠️ | Aplicaciones Web Progresivas (PWA) 🌐 | Web Responsive 🖥️ |
+| :--- | :--- | :--- | :--- | :--- |
+| **Rendimiento** 🚀 | ⭐⭐⭐⭐⭐ **Máximo** | ⭐⭐⭐⭐ **Medio-Alto** | ⭐⭐ **Bajo** | ⭐ **Bajo** (depende del navegador) |
+| **Acceso a Novedades del SO** ✅ | ✅ **Inmediato** | ❌ **Con retraso** | ❌ **N/A** (no depende del SO) | ❌ **N/A** |
+| **Coste y Tiempo** 💰⏰ | 🔴 **Alto** | 🟡 **Medio** | 🟢 **Bajo** | 🟢 **Muy Bajo** |
+| **Experiencia de Usuario (UX)** 👍 | 👍 **Perfecta** | 🤔 **Un reto** | 🙂 **Buena** (app-like) | 😐 **Básica** (es una web) |
+| **Escalabilidad** 🚀 | 🚀 **Infinita** | ⚠️ **Cuidado** | ✅ **Alta** (escalabilidad web) | ✅ **Alta** (escalabilidad web) |
+| **Distribución (App Stores)** 🛍️ | ✅ **Sí** | ✅ **Sí** | 🤏 **Parcial** (vía TWA) | ❌ **No** |
+| **Acceso al Dispositivo** 📸 | ✅ **Completo** | 👍 **Alto/Completo** | 🤏 **Parcial** | ⛔ **Muy Limitado** |
+| **Necesita Conexión** 📶 | 😌 **No siempre** | 😌 **No siempre** | 🙂 **Parcialmente** (offline-first) | ⚠️ **Siempre** |
+| **Curva de Aprendizaje** 🧠 | 🧗 **Alta** | 🏃 **Media** | 🚶 **Baja** | 🚶 **Muy Baja** (tecnología web estándar) |
+| **Caso de uso típico** 🎯 | Apps muy exigentes (juegos, editores), que requieran la máxima integración y rendimiento. | Proyectos con presupuesto/tiempo limitado (MVP), apps de negocio, o donde la UI es muy personalizada. | Herramientas internas, e-commerce, apps de noticias. Cuando se quiere una 'app' sin pasar por las stores. | Blogs, webs corporativas, landing pages. Presencia online básica y accesible para todos. |
 
-Utilizan tecnologías web (HTML, CSS, JS) para construir la aplicación, pero la empaquetan dentro de un contenedor nativo que la muestra a través de una `WebView`. Una `WebView` es, esencialmente, un navegador sin la barra de direcciones, lo que le da una apariencia de aplicación real.
-* **Ejemplos:** **Ionic**, Apache Cordova.
+-----
 
-#### **Aplicaciones Web Progresivas (PWA)**
+## ¿Qué Estudiaremos en Este Módulo?
 
-Son la evolución de las WebApps. Aportan muchas de las ventajas de una aplicación nativa (como notificaciones push, funcionamiento sin conexión y la posibilidad de "instalar" un acceso directo en la pantalla de inicio) pero se desarrollan con tecnología web.
-* **Ejemplos:** Frameworks como Angular PWA, Vue PWA o la librería React PWA.
-
-[https://www.youtube.com/watch?v=iJteraObjgs](https://www.youtube.com/watch?v=iJteraObjgs)
-
-#### **Aplicaciones Compiladas a Nativo o con Motor Propio**
-
-Son el enfoque más moderno y con mejor rendimiento. El código escrito en un lenguaje se traduce (compila) a componentes nativos de cada plataforma o se renderiza con un motor gráfico propio de alto rendimiento.
-* **Ejemplos:**
-    * **React Native / Native Script:** Usan JavaScript para controlar componentes de UI nativos.
-    * **Xamarin:** Usa C# que se compila a código nativo.
-    **Flutter:** Usa Dart y su propio motor gráfico (Skia) para "pintar" la interfaz.
-
----
-
-## 4. Comparativa de las Tecnologías
-
-Aquí tienes la tabla actualizada con emojis, la unión de coste y tiempo, y la nueva fila sobre la curva de aprendizaje.
-
-### **Comparativa de Tecnologías Móviles**
-
-| Característica 📋 | Aplicaciones Nativas 👑 | Aplicaciones Híbridas/Compiladas 🛠️ | Aplicaciones Web (PWA) 🌐 |
-| :--- | :--- | :--- | :--- |
-| **Coste y Tiempo 💰⏰** | 🔴 Alto | 🟡 Medio | 🟢 Bajo |
-| **Multiplataforma 📱📱**| ❌ No | ✅ Sí | ✅ Sí |
-| **Rendimiento 🚀** | ⭐⭐⭐⭐⭐ Alto | ⭐⭐⭐⭐ Medio-Alto | ⭐⭐ Bajo |
-| **Distribución (App Stores) 🛍️** | ✅ Sí | ✅ Sí | ❌ No |
-| **Acceso al Dispositivo 📸** | ✅ Completo | 👍 Alto/Completo (vía plugins) | 🤏 Parcial |
-| **Necesita Conexión 📶** | 😌 No siempre | 😌 No siempre | ⚠️ Generalmente sí |
-| **Espacio en Dispositivo 💾** | ✅ Sí | ✅ Sí | ❌ No |
-| **Curva de Aprendizaje 🧠** | 🧗 Alta | 🏃 Media | 🚶 Baja |
-
----
-
-## 5. ¿Qué Estudiaremos en Este Módulo?
-
-Como hemos visto el día de la presentación, el abanico de tecnologías es muy amplio. En este curso, nos centraremos en aprender a desarrollar **aplicaciones nativas para el sistema operativo Android con el lenguaje Kotlin**.
-
-
+Como vimos el día de la presentación, el abanico de tecnologías es muy amplio. En este curso, nos centraremos en aprender a desarrollar **aplicaciones nativas para el sistema operativo Android con el lenguaje Kotlin**.
 
 ### ¿Por qué Nativo con Kotlin?
 
-1.  **Base Fundamental:** Aprender desarrollo nativo te proporciona los cimientos más sólidos. Entenderás cómo funciona realmente el sistema operativo, la gestión de recursos, el ciclo de vida de una app y las guías de diseño oficiales. Este conocimiento es transferible y muy valioso, incluso si en el futuro decides usar una tecnología multiplataforma.
-2.  **Demanda de Mercado:** Sigue habiendo una gran demanda de desarrolladores nativos puros, especialmente para aplicaciones de alto rendimiento y de grandes empresas.
-3.  **La Tendencia de Kotlin:** Kotlin no solo es el lenguaje preferido para Android, sino que también es la base de **Kotlin Multiplatform (KMP)**, el nuevo framework con el que Google parece querer unificar el desarrollo multiplataforma. Aprender Kotlin ahora te posicionará perfectamente para el futuro del desarrollo móvil.
+1. **Base Fundamental:** Aprender desarrollo nativo te proporciona los cimientos más sólidos. Entenderás cómo funciona realmente el sistema operativo, la gestión de recursos, el ciclo de vida de una app y las guías de diseño oficiales.
 
-    * *Para saber más sobre KMP, puedes ver este vídeo:*
-        [https://www.youtube.com/watch?v=Wib6pjJoFzc](https://www.youtube.com/watch?v=Wib6pjJoFzc)
-    * *Artículo recomendado:*
-        [¿Por qué empezar con Kotlin nativo en lugar de Flutter?](https://devexperto.com/flutter-vs-kotlin/)
+2. **Demanda de Mercado:** Sigue habiendo una gran demanda de desarrolladores nativos puros, especialmente para aplicaciones de alto rendimiento y de grandes empresas.
 
-### Nuestro Reto: Tiempo Limitado y Alta Complejidad
+3. **La Tendencia de Kotlin y el Estado de KMP:** Kotlin es el lenguaje preferido para Android y la base de **Kotlin Multiplatform (KMP)**.
 
-[cite_start]El temario de este módulo es extenso y el tiempo es limitado (4 horas semanales según el horario oficial [cite: 43, 56]). Aprender un nuevo lenguaje y un framework de desarrollo es un reto incluso para programadores con experiencia. Por tanto, va a requerir un **gran esfuerzo y dedicación** por vuestra parte para alcanzar los objetivos.
+### Menciones de Honor, a Flutter y Kotlin Multiplatform (KMP)
 
-### Claves para Superar el Curso: Esfuerzo Diario
+#### **¿Qué es Flutter?**
 
-Para llevar el curso con éxito, es fundamental:
+Flutter es la tecnología multiplataforma creada por Google que está ganando más popularidad. ¡Es de código abierto y tiene una comunidad enorme\!
 
-* **Llevar las tareas al día:** No dejes que se acumulen los conceptos. La programación es acumulativa.
-* **Asimilar, no solo hacer:** Realizar una práctica no es suficiente. Debes repasarla después, entender el *porqué* de cada línea de código y preguntar todas tus dudas.
-* **Repetir y Repasar:** Revisa las prácticas anteriores hasta que los conceptos se solidifiquen. La repetición es la clave del aprendizaje en programación.
+Para entender cómo funciona Flutter, necesitamos conocer sus tres pilares:
+
+  * **Dart:** Es el lenguaje de programación, también creado por Google. Una de sus grandes ventajas es el **Hot Reload**, que nos permite ver los cambios en la app casi al instante sin tener que reiniciarla.
+  * **Skia:** Es el motor de renderizado 2D. En lugar de usar los botones o textos nativos de iOS o Android, Skia los *dibuja* por su cuenta en la pantalla. Esto garantiza que la app se vea (casi) igual en todas partes.
+  * **Widgets:** En Flutter, todo es un widget. Un botón es un widget, un texto es un widget, ¡incluso la forma de centrar algo en la pantalla es un widget\! Esto nos permite construir interfaces complejas combinando piezas simples.
+
+-----
+
+#### ¿Cuándo Debería Usar Flutter?
+
+Flutter es una alternativa fantástica y, según muchos, **la mejor opción multiplataforma que tenemos hoy**. Es una excelente elección para:
+
+  * **Startups y MVPs (Productos Mínimos Viables):** Para lanzar una aplicación rápidamente en ambos mercados con un presupuesto limitado.
+  * **Aplicaciones con Interfaces Personalizadas:** Donde no se busca imitar al 100% el look nativo.
+  * **Proyectos con Lógica de Negocio Compartida:** Apps donde la mayor parte del código no es visual y se puede compartir fácilmente.
+
+**La experiencia importa:** Los desarrolles multiplataforma con la experiencia y en particular los buenos, son aquellos que también **entienden cómo funcionan los sistemas nativos**. Conocer las bases de iOS y Android te dará una ventaja competitiva enorme, incluso si te especializas en Flutter.
+
+#### KMP - Kotlin Multiplatform. Estado Actual de Kotlin Multiplatform (KMP):
+
+KMP ha alcanzado una fase **estable y está listo para producción**. Google y JetBrains están invirtiendo fuertemente en él. Su enfoque es diferente al de Flutter: **KMP se centra en compartir la lógica de negocio (acceso a datos, red, etc.), pero la interfaz de usuario (UI) se construye de forma nativa en cada plataforma (con Jetpack Compose en Android y SwiftUI en iOS)**.
+
+* **Adopción:** Está creciendo de manera constante, especialmente en empresas que ya tienen equipos nativos de Android e iOS y buscan unificar la lógica sin sacrificar la UI nativa. Empresas como **Netflix, VMWare y Forbes** ya lo usan en producción.
+* **¿Ha despegado?** Aún no tiene la cuota de mercado de Flutter o React Native, pero su crecimiento es sólido y se considera una apuesta de futuro muy seria, sobre todo para proyectos que exigen una UI 100% nativa.
+
+*Para saber más sobre KMP, puedes ver este vídeo:*
+[https://www.youtube.com/watch?v=Wib6pjJoFzc](https://www.youtube.com/watch?v=Wib6pjJoFzc)
+*Artículo recomendado:*
+[https://devexperto.com/flutter-vs-kotlin/](https://devexperto.com/flutter-vs-kotlin/)
+
+-----
+
+### Conclusión
+
+Como vemos, no hay una respuesta única. Ambas vías, **nativa** y **multiplataforma**, son válidas y tienen su lugar en la industria. Nuestro objetivo en este ciclo, tal como marcan los resultados de aprendizaje del módulo **0489 - Programación multimedia y dispositivos móviles**, es que seáis capaces de:
+
+  * **Evaluar las tecnologías disponibles** para dispositivos móviles.
+  * **Desarrollar aplicaciones** empleando las librerías y herramientas específicas, ya sea para móviles o para juegos 2D y 3D.
+  * **Integrar contenidos multimedia** y crear interfaces de usuario funcionales y atractivas.
+
+[Descubre cuál framework domina el mercado en 2024](https://www.youtube.com/watch?v=o5xJNjb70Ec)
+
