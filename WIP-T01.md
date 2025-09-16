@@ -114,6 +114,7 @@ Este es un término paraguas que engloba a todas las tecnologías cuyo objetivo 
 
 * **a) Enfoque Híbrido (Basado en `WebView`):** La aplicación se construye utilizando tecnologías web estándar (HTML, CSS, JavaScript) y se empaqueta dentro de un contenedor nativo. Este contenedor expone un componente `WebView` (un motor de navegador sin chrome) que renderiza la aplicación. La comunicación con las funcionalidades nativas del dispositivo (cámara, GPS) se realiza a través de un "puente" de JavaScript.
     * *Ejemplos representativos:* Apache Cordova, Ionic.
+    * Recurso adicional: [What, When, Where, How WebView? | BitBuddy](https://www.youtube.com/watch?v=GHLETeVh3ps)
 
 * **b) Enfoque Compilado o con Renderizado Nativo:** El código fuente, escrito en un lenguaje no nativo, se traduce a elementos nativos en tiempo de compilación o se utiliza un motor de renderizado de alto rendimiento para dibujar la interfaz directamente sobre un canvas de la plataforma. Este paradigma evita el cuello de botella de rendimiento de la `WebView`.
     * **Compilado a Widgets Nativos:** El framework actúa como un traductor que convierte los componentes de UI definidos en el código (p. ej., en JavaScript) a sus equivalentes 100% nativos en cada plataforma. *Ejemplo representativo:* React Native.
@@ -126,6 +127,7 @@ Esta categoría opera fundamentalmente dentro del **sandbox del navegador web** 
 * **a) Aplicación Web Móvil (WebApp):** Es un sitio web con un diseño *responsive* que se adapta a las pantallas de los dispositivos móviles. Su funcionalidad está intrínsecamente ligada a la del navegador y requiere una conexión a internet activa.
 
 * **b) Aplicación Web Progresiva (PWA):** Es una evolución de la WebApp que utiliza APIs modernas del navegador (como *Service Workers* y el *Web App Manifest*) para proporcionar una experiencia similar a la de una aplicación nativa. Ofrece capacidades como el funcionamiento sin conexión, notificaciones push y la posibilidad de ser "añadida a la pantalla de inicio". Aunque una PWA puede ser encapsulada en una *Trusted Web Activity (TWA)* para su distribución en la Google Play Store, su arquitectura fundamental sigue residiendo y ejecutándose en el entorno del navegador, lo que la sitúa en la frontera entre una WebApp avanzada y una aplicación híbrida. El gran problema de las PWAs es su **baja descubribilidad**. El aviso de "Añadir a pantalla de inicio" es a menudo ignorado o no entendido por los usuarios, que están acostumbrados al modelo centralizado de las App Stores para descubrir e instalar aplicaciones.
+  * Recurso Adicional: [Installing a PWA](https://www.youtube.com/watch?v=iJteraObjgs)
 
 ### **Tabla Comparativa de Estrategias de Desarrollo Móvil**
 
@@ -141,6 +143,8 @@ Esta categoría opera fundamentalmente dentro del **sandbox del navegador web** 
 | **Necesita Conexión** 📶 | 😌 **No siempre** | 😌 **No siempre** | 🙂 **Parcialmente** (offline-first) | ⚠️ **Siempre** |
 | **Curva de Aprendizaje** 🧠 | 🧗 **Alta** | 🏃 **Media** | 🚶 **Baja** | 🚶 **Muy Baja** (tecnología web estándar) |
 | **Caso de uso típico** 🎯 | Apps muy exigentes (juegos, editores), que requieran la máxima integración y rendimiento. | Proyectos con presupuesto/tiempo limitado (MVP), apps de negocio, o donde la UI es muy personalizada. | Herramientas internas, e-commerce, apps de noticias. Cuando se quiere una 'app' sin pasar por las stores. | Blogs, webs corporativas, landing pages. Presencia online básica y accesible para todos. |
+
+Recurso adicional: [Descubre cuál framework domina el mercado en 2024](https://www.youtube.com/watch?v=o5xJNjb70Ec)
 
 -----
 
@@ -202,5 +206,5 @@ Como vemos, no hay una respuesta única. Ambas vías, **nativa** y **multiplataf
   * **Desarrollar aplicaciones** empleando las librerías y herramientas específicas, ya sea para móviles o para juegos 2D y 3D.
   * **Integrar contenidos multimedia** y crear interfaces de usuario funcionales y atractivas.
 
-[Descubre cuál framework domina el mercado en 2024](https://www.youtube.com/watch?v=o5xJNjb70Ec)
+
 
