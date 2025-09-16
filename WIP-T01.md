@@ -189,6 +189,9 @@ KMP ha alcanzado una fase **estable y está listo para producción**. Google y J
 * **Adopción:** Está creciendo de manera constante, especialmente en empresas que ya tienen equipos nativos de Android e iOS y buscan unificar la lógica sin sacrificar la UI nativa. Empresas como **Netflix, VMWare y Forbes** ya lo usan en producción.
 * **¿Ha despegado?** Aún no tiene la cuota de mercado de Flutter o React Native, pero su crecimiento es sólido y se considera una apuesta de futuro muy seria, sobre todo para proyectos que exigen una UI 100% nativa.
 
+Actualización 2025: KMP sigue ganando tracción. A el nivel 1 - lógica de negocio compartida - se ha unido el nivel 2 - UI compartida - con librerías como **Kotlin/Compose Multiplatform** que permiten compartir componentes de UI entre Android, iOS, escritorio y web. Aunque aún no es tan maduro como Flutter, la comunidad y el ecosistema están creciendo rápidamente. Compose Multiplatform ya está disponible para iOS en multiplataforma en release estable, y para web se espera que alcance la beta durante este año.
+[KotlinConf'25 Keynote](https://www.youtube.com/watch?v=Wib6pjJoFzc)
+
 *Para saber más sobre KMP, puedes ver este vídeo:*
 [https://www.youtube.com/watch?v=Wib6pjJoFzc](https://www.youtube.com/watch?v=Wib6pjJoFzc)
 *Artículo recomendado:*
