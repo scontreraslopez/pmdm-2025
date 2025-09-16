@@ -144,8 +144,6 @@ Esta categoría opera fundamentalmente dentro del **sandbox del navegador web** 
 | **Curva de Aprendizaje** 🧠 | 🧗 **Alta** | 🏃 **Media** | 🚶 **Baja** | 🚶 **Muy Baja** (tecnología web estándar) |
 | **Caso de uso típico** 🎯 | Apps muy exigentes (juegos, editores), que requieran la máxima integración y rendimiento. | Proyectos con presupuesto/tiempo limitado (MVP), apps de negocio, o donde la UI es muy personalizada. | Herramientas internas, e-commerce, apps de noticias. Cuando se quiere una 'app' sin pasar por las stores. | Blogs, webs corporativas, landing pages. Presencia online básica y accesible para todos. |
 
-Recurso adicional: [Descubre cuál framework domina el mercado en 2024](https://www.youtube.com/watch?v=o5xJNjb70Ec)
-
 -----
 
 ## ¿Qué Estudiaremos en Este Módulo?
