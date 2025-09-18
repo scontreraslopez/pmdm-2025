@@ -1,6 +1,28 @@
 # T02-Introducción a Kotlin
 
-## Crash Course para Alumnos de Java
+## Crash Course para Alumnos de Java - Índice
+
+- [Introducción](#introducción)
+- [1. La función main()](#1-la-función-main)
+- [2. Sacando información por pantalla: print y println](#2-sacando-información-por-pantalla-print-y-println)
+- [3. Nomenclatura: Naming Conventions](#3-nomenclatura-naming-conventions)
+- [4. Manejo de Strings: Más allá de Java](#4-manejo-de-strings-más-allá-de-java)
+- [5. Mutabilidad: val vs. var](#5-mutabilidad-val-vs-var)
+  - [6. Sistema de tipos e inferencia](#6-sistema-de-tipos-e-inferencia)
+- [7. Ejercicios propuestos - I](#7-ejercicios-propuestos-i)
+- [Flujo de Entrada y Salida (I/O)](#flujo-de-entrada-y-salida-io)
+- [9. Variables (val y var) - Profundizando](#9-variables-val-y-var-profundizando)
+- [10. Tipos de Datos: Primitivos o no?](#10-tipos-de-datos-primitivos-o-no)
+- [11. Arrays y Strings](#11-arrays-y-strings)
+- [12. Conversión de Tipos (Casting)](#12-conversion-de-tipos-casting)
+- [13. Lecturas obligatorias I](#13-lecturas-obligatorias-i)
+- [14. Anulabilidad y Seguridad de Nulos](#14-anulabilidad-y-seguridad-de-nulos)
+  - [Herramientas para manejar nulos](#herramientas-para-manejar-nulos)
+    - [Operador de llamada segura (?.)](#operador-de-llamada-segura)
+    - [Operador Elvis (?:)](#operador-elvis)
+    - [Aserción no nula (!!)](#asercion-no-nula)
+    - [Smart casts](#smart-casts)
+- [15. Ejercicios propuestos - II](#15-ejercicios-propuestos-ii)
 
 ### Introducción
 
@@ -24,7 +46,6 @@ La adopción de Kotlin por parte de Google marcó un punto de inflexión. Esto s
 - **Misma JVM**: Utiliza la Java Virtual Machine, aprovechando toda la infraestructura y librerías del ecosistema Java.
 
 ![Misma JVM](img/T02/misma_jvm.png)
-
 
 - **Sintaxis Moderna**: Código más conciso y legible que Java, con características que mejoran la productividad del desarrollador.
 - **Seguridad de Tipos**: Reduce errores comunes como los `NullPointerException` con un sistema de tipos más robusto.
@@ -54,7 +75,7 @@ Otros recursos interesantes para darle duro durísimo 🌯 al coding son:
 - [LeetCode - Kotlin Problems](https://leetcode.com/problemset/all/?difficulty=All&status=All&tags=&listId=&page=1&language=Kotlin): Problemas de algoritmos y estructuras de datos para practicar.
 - [HackerRank - Kotlin Challenges](https://www.hackerrank.com/domains/tutorials/10-days-of-kotlin): Desafíos de programación en Kotlin.
 
-### **1. La función `main()`**
+### 1. La función `main()`
 
 En **Java**, estamos acostumbrados a la verbosidad (sí, este adjetivo existe en castellano) de una clase solo para empezar:
 
@@ -137,7 +158,7 @@ data class Persona(var nombre: String, var edad: Int)
 
 -----
 
-### **2. Sacando información por pantalla: `print()` y `println()`**
+### 2. Sacando información por pantalla: `print()` y `println()`
 
 De nuevo, la simpleza es la clave. En Java imprimíamos por pantalla usando `System.out.println()`. Esto son tres niveles de jerarquía para algo tan básico como mostrar texto. Clase `System`, objeto `out` (salida estándar), método `println()`.
 
@@ -160,7 +181,7 @@ En Kotlin, estas funciones forman parte de la librería estándar de Kotlin, que
 
 -----
 
-### **3. Nomenclatura: `Naming Conventions`**
+### 3. Nomenclatura: Naming Conventions
 
 Normalmente el tema de la nomenclatura se pasa demasiado por alto, pero desde la experiencia personal en proyectos software, es lo primero que muchos miramos para saber si podemos esperar un código profesional y mantenible o un circo de los horrores. Si la gente no ha sido capaz de seguir unas simples convenciones de nombres, ¿cómo podemos confiar en que su código sea sólido y bien estructurado? Lo mismo sucede con las faltas de ortografía en la UI, generan desconfianza sobre la calidad del producto. ¿Sí algo tan obvio se ha escapado de las pruebas, qué más puede estar mal?
 
@@ -173,9 +194,7 @@ Aquí puedes tranquilizarles: las convenciones son prácticamente idénticas a l
 
 -----
 
-### Variables y Tipos de Datos: La magia de Kotlin
-
-### **4. Manejo de Strings: Más allá de Java**
+### 4. Manejo de Strings: Más allá de Java
 
 Aquí es donde Kotlin empieza a brillar de verdad para los que vienen de Java. Esta parte era un dolor de muelas en Java y Kotlin lo hace mucho más sencillo e intuitivo, similar a las string templates de JavaScript o Python.
 
@@ -207,7 +226,7 @@ Aquí es donde Kotlin empieza a brillar de verdad para los que vienen de Java. E
 
 -----
 
-### **5. Mutabilidad: `val` vs. `var`**
+### 5. Mutabilidad: `val` vs. `var`
 
 Este es un cambio de paradigma fundamental respecto a Java.
 
@@ -244,7 +263,7 @@ Este es un tema que merece un poco más de atención porque hay importantes dife
 
 [Popularidad de los lenguajes de programación](https://www.youtube.com/watch?v=ZTPrbAKmcdo)
 
-##### 📌 Tipado dinámico vs. estático
+##### Tipado dinámico vs. estático
 
 - **Dinámico** → El tipo se asocia al valor y se comprueba **en tiempo de ejecución**. Una variable puede cambiar de tipo durante la ejecución.  
   Ej.: Python:  
@@ -264,7 +283,7 @@ Este es un tema que merece un poco más de atención porque hay importantes dife
 
 ---
 
-##### 📌 Tipado fuerte vs. débil
+##### Tipado fuerte vs. débil
 
 - **Fuerte** → No permite mezclar tipos incompatibles sin conversión explícita.  
   Ej.: Python y Kotlin:  
@@ -317,7 +336,7 @@ En el caso de `Byte` y `Short`, no existen sufijos de literal, por lo que siempr
 
 Insistir que la inferencia de tipos no hace que Kotlin sea "débilmente tipado" como Python o JavaScript. El tipo sigue estando ahí, es inmutable y se comprueba en compilación, lo que nos da la seguridad de Java con la verbosidad reducida de un lenguaje de scripting.
 
-### 7. Ejercicios propuestos - I🏋️‍♂️
+### 7. Ejercicios propuestos - I
 
 #### Ejercicio 0: Setup del entorno
 
@@ -347,7 +366,7 @@ Empaqueta todo en una función `ejercicio2()` y llámala desde `main()`.
 
 -----
 
-### Flujo de Entrada y Salida (I/O) ⌨️
+### Flujo de Entrada y Salida (I/O)
 
 Mientras que en **Java** se necesita un objeto `Scanner` para leer desde la consola, Kotlin lo simplifica enormemente.
 
@@ -375,7 +394,7 @@ fun main() {
 
 -----
 
-### 9. Variables (`val` y `var`) - Profundizando 🔬
+### 9. Variables (`val` y `var`) - Profundizando
 
 Ya introdujimos `val` y `var`, pero un punto clave que confunde a los que vienen de Java es la diferencia entre **referencia inmutable y objeto inmutable**.
 
@@ -395,7 +414,7 @@ println(colores) // Imprime [rojo, verde, azul, amarillo]
 
 -----
 
-### 10. Tipos de Datos: ¿Primitivos o no? 📦
+### 10. Tipos de Datos: ¿Primitivos o no?
 
 Esta es una de las diferencias más elegantes y simplificadoras de Kotlin respecto a Java es la siguiente: En **Java**, existen tipos primitivos (`int`, `double`, `boolean`) y sus clases envoltorio (wrapper) (`Integer`, `Double`, `Boolean`). En **Kotlin**, **todo es un objeto**. No hay distinción a nivel de código entre primitivos y sus envoltorios; usamos `Int`, `Double`, `Boolean`, etc., directamente.
 
@@ -407,7 +426,7 @@ val numeroComoString: String = numero.toString()
 
 -----
 
-### 11. Arrays y Strings ⛓️
+### 11. Arrays y Strings
 
 Ambos son fundamentales, y Kotlin ofrece mejoras de calidad de vida.
 
@@ -432,7 +451,7 @@ println("La longitud es: ${saludo.length}") // .length es una propiedad
 
 -----
 
-### 12. Conversión de Tipos (Casting) 🔄
+### 12. Conversión de Tipos (Casting)
 
 Es casi una ironía siendo su código más sucinto, pero Kotlin es más estricto y seguro que Java en este aspecto para evitar errores sutiles.
 
@@ -554,7 +573,7 @@ if (email != null) {
 }
 ```
 
-### 15. Ejercicios propuestos - II🏋️‍♂
+### 15. Ejercicios propuestos - II
 
 ####️ Ejercicio 3: Preguntas Anulabilidad
 

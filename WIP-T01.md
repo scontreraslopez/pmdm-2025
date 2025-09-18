@@ -10,6 +10,8 @@ El desarrollo de aplicaciones móviles, como proyecto de software complejo, comp
 
 Es el enfoque tradicional y **secuencial**. Las fases del proyecto (análisis, diseño, desarrollo, pruebas, despliegue) ocurren una detrás de otra, y no se puede avanzar a la siguiente sin haber completado la anterior. Aunque fue un estándar, hoy es poco práctico para el desarrollo móvil por su rigidez y su incapacidad para adaptarse a los cambios rápidos que exige el mercado.
 
+![Modelo en Cascada](img/T01/waterfall.jpg)
+
 **Reflexión:**
 
 * ¿Qué problemas identificáis en el modelo en cascada para el desarrollo de una app móvil?
