@@ -12,8 +12,8 @@ Es el enfoque tradicional y **secuencial**. Las fases del proyecto (análisis, d
 
 **Reflexión:**
 
-  * ¿Qué problemas identificáis en el modelo en cascada para el desarrollo de una app móvil?
-  * A pesar de sus inconvenientes, ¿qué ventaja fundamental creéis que podría ofrecer este modelo en la gestión de un proyecto?
+* ¿Qué problemas identificáis en el modelo en cascada para el desarrollo de una app móvil?
+* A pesar de sus inconvenientes, ¿qué ventaja fundamental creéis que podría ofrecer este modelo en la gestión de un proyecto?
 
 ### Metodologías Ágiles (Scrum)
 
@@ -21,10 +21,10 @@ Este es el enfoque **iterativo e incremental**, y el estándar de facto en el de
 
 **Reflexión:**
 
-  * Si una gran empresa os contrata para desarrollar una app con un presupuesto cerrado, ¿qué conflicto surge al aplicar Agile y cómo lo gestionaríais?
-  * Si Agile puede parecer un 'cheque en blanco' para el cliente, ¿qué argumentos usaríais para convencerle de sus ventajas frente a la aparente seguridad de un presupuesto cerrado?
-  * ¿Cómo evita el equipo que el cliente añada funcionalidades sin control en cada sprint, desvirtuando el proyecto y los plazos?
-  * En Agile, si el alcance es flexible, ¿cómo demostramos al cliente que el proyecto es un éxito y que su inversión está siendo rentable?
+* Si una gran empresa os contrata para desarrollar una app con un presupuesto cerrado, ¿qué conflicto surge al aplicar Agile y cómo lo gestionaríais?
+* Si Agile puede parecer un 'cheque en blanco' para el cliente, ¿qué argumentos usaríais para convencerle de sus ventajas frente a la aparente seguridad de un presupuesto cerrado?
+* ¿Cómo evita el equipo que el cliente añada funcionalidades sin control en cada sprint, desvirtuando el proyecto y los plazos?
+* En Agile, si el alcance es flexible, ¿cómo demostramos al cliente que el proyecto es un éxito y que su inversión está siendo rentable?
 
 ### El Híbrido "Scrummerfall" y similares
 
@@ -36,8 +36,8 @@ Nótese que términos como "**Scrummerfall**" pueden ser peyorativos, pero repre
 
 **Reflexión:**
 
-  * Viendo que estos modelos no son "ni una cosa ni la otra", ¿qué problemas del mundo real creéis que intentan solucionar los enfoques híbridos?
-  * Un equipo que intenta trabajar con Sprints (Agile) dentro de una organización que exige un plan cerrado con meses de antelación (Waterfall) puede sufrir mucha frustración. ¿Qué conflictos o tensiones creéis que pueden surgir entre los desarrolladores y la gerencia en un entorno así?
+* Viendo que estos modelos no son "ni una cosa ni la otra", ¿qué problemas del mundo real creéis que intentan solucionar los enfoques híbridos?
+* Un equipo que intenta trabajar con Sprints (Agile) dentro de una organización que exige un plan cerrado con meses de antelación (Waterfall) puede sufrir mucha frustración. ¿Qué conflictos o tensiones creéis que pueden surgir entre los desarrolladores y la gerencia en un entorno así?
 
 ## Limitaciones que plantea la ejecución de aplicaciones en dispositivos móviles
 
@@ -93,21 +93,21 @@ Para analizar las distintas estrategias de desarrollo de aplicaciones móviles, 
 **1. Desarrollo Nativo**
 Consiste en la utilización del **Software Development Kit (SDK)** oficial, el lenguaje de programación y el paradigma de diseño estipulado por el proveedor de la plataforma. Este enfoque garantiza el acceso directo y de máximo rendimiento a todas las APIs del sistema operativo y las capacidades del hardware. El resultado es una aplicación que ofrece la mayor fidelidad en términos de rendimiento, comportamiento y estética (UI/UX) con respecto a la plataforma de destino.
 
-  * **Android 🤖:**
-      * **Lenguajes:** **Kotlin** (recomendado oficialmente) y Java (legacy).
-      * **Entorno de Desarrollo (IDE):** Android Studio.
-  * **iOS (iPhone) 🍏:**
-      * **Lenguajes:** **Swift** (para las aplicaciones modernas) y Objective-C (legacy).
-      * **Entorno de Desarrollo (IDE):** Xcode.
+* **Android 🤖:**
+  * **Lenguajes:** **Kotlin** (recomendado oficialmente) y Java (legacy).
+  * **Entorno de Desarrollo (IDE):** Android Studio.
+* **iOS (iPhone) 🍏:**
+  * **Lenguajes:** **Swift** (para las aplicaciones modernas) y Objective-C (legacy).
+  * **Entorno de Desarrollo (IDE):** Xcode.
 
 En un proyecto nativo que se plantease para ambas plataformas, supondría **dos bases de código completamente separadas**. Esto implica que el flujo de trabajo, las versiones y los repositorios en el control de versiones (como Git) se gestionan de manera independiente.
 
 **Ventajas clave del desarrollo nativo:**
 
-  * ✅ **Máximo Rendimiento:** Son las aplicaciones más rápidas, eficientes y que mejor gestionan la batería y la memoria.
-  * ✅ **Acceso Total:** Tienen acceso inmediato y completo a todas las novedades del sistema operativo y del hardware (cámaras, sensores, etc.).
-  * ✅ **Seguridad y Soporte:** Cuentan con el soporte directo de Apple y Google, garantizando la máxima seguridad y estabilidad.
-  * ✅ **Experiencia de Usuario (UX) Perfecta:** Se integran visualmente a la perfección con el sistema, ofreciendo la experiencia a la que el usuario está acostumbrado.
+* ✅ **Máximo Rendimiento:** Son las aplicaciones más rápidas, eficientes y que mejor gestionan la batería y la memoria.
+* ✅ **Acceso Total:** Tienen acceso inmediato y completo a todas las novedades del sistema operativo y del hardware (cámaras, sensores, etc.).
+* ✅ **Seguridad y Soporte:** Cuentan con el soporte directo de Apple y Google, garantizando la máxima seguridad y estabilidad.
+* ✅ **Experiencia de Usuario (UX) Perfecta:** Se integran visualmente a la perfección con el sistema, ofreciendo la experiencia a la que el usuario está acostumbrado.
 
 **2. Estrategias Multiplataforma**
 Este es un término paraguas que engloba a todas las tecnologías cuyo objetivo es maximizar la reutilización de código a través de diferentes sistemas operativos. Un **mismo código y lenguaje de programación** puede compilarse para ejecutarse en dos o más plataformas diferentes, buscando un ahorro de tiempo y recursos. En este caso, gestionamos un **único proyecto** para todas las plataformas. Es un enfoque similar al Java "Write Once, Run Anywhere" (WORA) de hace años, pero adaptado a las necesidades y limitaciones del entorno móvil.Sin embargo, se subdividen en arquitecturas muy diferentes:
@@ -119,7 +119,6 @@ Este es un término paraguas que engloba a todas las tecnologías cuyo objetivo 
 * **b) Enfoque Compilado o con Renderizado Nativo:** El código fuente, escrito en un lenguaje no nativo, se traduce a elementos nativos en tiempo de compilación o se utiliza un motor de renderizado de alto rendimiento para dibujar la interfaz directamente sobre un canvas de la plataforma. Este paradigma evita el cuello de botella de rendimiento de la `WebView`.
     * **Compilado a Widgets Nativos:** El framework actúa como un traductor que convierte los componentes de UI definidos en el código (p. ej., en JavaScript) a sus equivalentes 100% nativos en cada plataforma. *Ejemplo representativo:* React Native.
     * **Renderizado Propio:** El framework incluye su propio motor gráfico que se encarga de "pintar" cada píxel de la interfaz de usuario. Esto ofrece una consistencia visual máxima entre plataformas. *Ejemplo representativo:* Flutter (con su motor Skia).
-
 
 **3. Aplicaciones Web Móviles y Progresivas (PWA)**
 Esta categoría opera fundamentalmente dentro del **sandbox del navegador web** y no requiere instalación a través de una tienda de aplicaciones.
