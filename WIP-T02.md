@@ -342,7 +342,7 @@ Insistir que la inferencia de tipos no hace que Kotlin sea "débilmente tipado" 
 
 1. Instala Android Studio (si no lo tienes ya).
 2. Crea un nuevo proyecto Android con una Activity vacía.
-3. Añade un nuevo fichero Kotlin `EjerciciosT02` en el directorio.
+3. Añade un nuevo fichero Kotlin (por ejemplo `EjerciciosT02` o `Main.kt`) en el directorio.
 4. Crea un repo privado en GitHub dentro de tu organización de Móvil 2025.
 5. Configura el remote, la autenticación.
 
