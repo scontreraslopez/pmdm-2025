@@ -301,7 +301,7 @@ var anno = 2025
 
 // Tipado explícito (a veces necesario o preferible por claridad)
 val notaFinal: Double = 9.5
-var profesor: String = "Profesor Coach"
+var profesor: String = "Profesor Sergio"
 ```
 
 En Kotlin, los literales enteros son `Int` por defecto y los literales con decimales son `Double` por defecto.  
@@ -456,13 +456,161 @@ Esta "molestia" inicial es en realidad una gran ventaja. Obliga al programador a
 
 Muchas cosas se han visto en esta presentación, pero revisando las fuentes originales se asientan mejor los conceptos. Asegurate de leer las siguientes secciones de la guía de Develou antes de continuar:
 
-- Introducción A Kotlin
-- Hola Mundo En Kotlin
-- Flujo De Entrada Y Salida En Kotlin
-- Variables
-- Tipos Primitivos En Kotlin
-- Strings En Kotlin
-- Arrays
-- Conversión de tipos
+- [Introducción a Kotlin](https://www.develou.com/introduccion-a-kotlin/)
+- [Hola Mundo en Kotlin](https://www.develou.com/hola-mundo-en-kotlin/)
+- [Flujo de Entrada y Salida en Kotlin](https://www.develou.com/flujo-de-entrada-y-salida-en-kotlin/)
+- [Variables](https://www.develou.com/variables-en-kotlin/)
+- [Tipos primitivos en Kotlin](https://www.develou.com/tipos-primitivos-en-kotlin/)
+- [Strings en Kotlin](https://www.develou.com/strings-en-kotlin/)
+- [Arrays](https://www.develou.com/arrays-en-kotlin/)
+- [Conversión de tipos](https://www.develou.com/conversion-de-tipos-en-kotlin/)
+
+### 14. Anulabilidad y Seguridad de Nulos
+
+En **Java**, cualquier variable de tipo objeto puede ser `null` por defecto. Si intentan usar un método o propiedad de una variable que es `null`, la aplicación se detiene bruscamente en tiempo de ejecución como el infame `NullPointerException` (NPE).
+
+El creador de `null`, Tony Hoare, se refirió a su invención como su "error del billón (inglés) de dólares" por la incalculable cantidad de horas de depuración y errores en producción que ha causado a lo largo de los años. [Fuente](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare/)
+
+-----
+
+#### La Solución de Kotlin: El Sistema de Tipos Nulables ✅
+
+Kotlin aborda este problema directamente desde su sistema de tipos. La regla fundamental es: **por defecto, las variables no pueden ser nulas**. El propio compilador no te dejará asignar `null` a una variable normal.
+
+Para permitir que una variable pueda contener `null`, debemos declararlo explícitamente añadiendo una interrogación (`?`) al final del tipo.
+
+```kotlin
+// TIPO NO NULABLE (por defecto)
+var nombre: String = "IES Severo Ochoa"
+// nombre = null  // ¡ERROR DE COMPILACIÓN! El compilador nos protege.
+
+// TIPO NULABLE (explícito con ?)
+var alias: String? = "El mejor instituto"
+alias = null // ¡Correcto! Esta variable está diseñada para poder ser nula.
+```
+
+[!NOTA]
+> Es un cambio de paradigma importante con respecto a Java. En Java, se asume que algo *puede* ser nulo y es responsabilidad del programador recordarlo. En Kotlin, se asume que algo *nunca* es nulo, y si puede serlo, el compilador te **obliga** a manejar esa posibilidad.
+
+-----
+
+#### Herramientas para Manejar Nulos de Forma Segura 🛠️
+
+Una vez que tienes una variable nulable (con `?`), el compilador no te dejará usarla directamente. Te obligará a usar una de estas herramientas para garantizar la seguridad.
+
+##### **1. El Operador de Llamada Segura (`?.`)**
+
+Es la forma más común y elegante. Ejecuta la acción (llamar a un método, acceder a una propiedad) solo si el objeto no es nulo. Si es nulo, toda la expresión devuelve `null` y la ejecución continúa sin fallar.
+
+```kotlin
+val instituto: String? = "IES Severo Ochoa"
+println(instituto?.length) // Imprime 16
+
+val institutoNulo: String? = null
+println(institutoNulo?.length) // Imprime "null" en la consola, ¡pero no rompe la app!
+```
+
+##### **2. El Operador Elvis (`?:`)**
+
+![Elvis Operator](img/T02/elvis_operator.webp)
+
+Perfecto para proporcionar un valor por defecto cuando una variable es nula. Si la expresión a la izquierda del operador Elvis no es nula, se usa su valor; si es nula, se usa el valor de la derecha.
+
+```kotlin
+val nombreProfesor: String? = null
+val nombreAMostrar = nombreProfesor ?: "Profesor Desconocido"
+println(nombreAMostrar) // Imprime "Profesor Desconocido"
+
+// Se puede encadenar con la llamada segura:
+val longitud = nombreProfesor?.length ?: 0
+println("La longitud del nombre es $longitud") // Imprime "La longitud del nombre es 0"
+```
+
+#### **3. El Operador de Aserción No Nula (`!!`)**
+
+Esta es la opción más arriesgada y la que más se parece al comportamiento de Java. Le dice al compilador: "Te aseguro que esta variable no es nula aquí. Confía en mí y déjame usarla" **Trust me bro**. Si te equivocas y la variable es `null`, **la aplicación se romperá con un `KotlinNullPointerException`**.
+
+```kotlin
+val direccion: String? = "Av. de la Unesco, s/n"
+val longitud = direccion!!.length // Funciona porque no es nulo
+
+val direccionNula: String? = null
+// val longitudNula = direccionNula!!.length // ¡CRASH! Lanza una excepción.
+```
+
+El operador `!!` es lo que llamos un **code smell**, algo que pinta mal. Por lo general **evitad el operador `!!` siempre que sea posible**. Su uso es considerado una mala práctica y a menudo indica que la lógica del programa podría mejorarse usando llamadas seguras u operadores Elvis. Es una "salida de emergencia", no una herramienta de uso diario.
+
+#### **4. `Smart Casts` (Conversiones Inteligentes)**
+
+El compilador de Kotlin es lo suficientemente inteligente como para saber que si has comprobado que una variable no es nula, dentro de ese bloque de código, puede tratarla como si fuera no nulable, sin necesidad de operadores.
+
+```kotlin
+var email: String? = "info@iesseveroochoa.com"
+
+if (email != null) {
+    // Dentro de este 'if', el compilador sabe que 'email' no es nulo.
+    // Podemos usarlo como un String normal, sin '?' ni '!!'.
+    println("El email tiene ${email.length} caracteres.")
+}
+```
+
+### 15. Ejercicios propuestos - II🏋️‍♂
+
+####️ Ejercicio 3: Preguntas Anulabilidad
+
+Crea un nuevo archivo en Kotlin de tipo File, llamado `preguntas1.md` (es como un readme) en el que copiarás y contestarás las siguientes preguntas:
+
+1.	¿Qué sucede cuando intentas asignar un valor nulo a una variable no anulable? ¿Cómo cambiarías su definición?
+
+```
+val nombre: String = null
+```
+
+2.	Declara una variable de tipo entero que permita nulo inicializa a null
+
+3.	Qué tipo tendrá la variable “tam” y que valor tendrá. ¿Se produce error de compilación o ejecución?
+
+```
+val nombre: String?=null
+val tam=nombre?.length
+```
+
+4.	Qué tipo tendrá la variable “tam” y que valor tendrá. ¿Se produce error de compilación o ejecución?
+
+```
+val nombre: String?=null
+val tam=nombre!!.length
+```
+
+5.	Qué tipo tendrá la variable “tam” y que valor tendrá. ¿Se produce error de compilación o ejecución?
+
+```
+val nombre: String?=null
+val tam=nombre!!.length
+```
+
+6.	Qué tipo tendrá la variable “tam” y que valor tendrá. ¿Se produce error de compilación o ejecución?
+
+```
+val nombre: String?="Pepe"
+val tam=nombre!!.length
+```
+
+7.	Investiga para sirve la función checkNotNull()
+
+
+8.	Qué valor tiene longitud
+
+```
+val nombre: String?="Pepe"    
+val longitud = nombre?.length ?: 0
+```
+
+9.	¿Qué valor tiene longitud?
+```
+val nombre: String?=null    
+val longitud = nombre?.length ?: 0
+```
+
 
 
