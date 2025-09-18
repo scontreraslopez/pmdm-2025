@@ -338,6 +338,8 @@ Insistir que la inferencia de tipos no hace que Kotlin sea "débilmente tipado" 
 
 Crea un programa en Kotlin que pida dos números al usuario y muestre por pantalla la suma, la resta y la multiplicación. Procura que la entrada sea en la misma línea como la imagen. Por el momento no comprobamos los tipos, ve la nota abajo. Imprime primero un mensaje en el que aparezca tu nombre “Ejercicio 2: Sergio Contreras".
 
+![Ejemplo de entrada en la misma línea](img/T02/ej02-ejemplo.png)
+
 Empaqueta todo en una función `ejercicio2()` y llámala desde `main()`.
 
 [!NOTE]
@@ -432,7 +434,7 @@ println("La longitud es: ${saludo.length}") // .length es una propiedad
 
 ### 12. Conversión de Tipos (Casting) 🔄
 
-Es casi una ironía siendo más sucinto su código, pero Kotlin es más estricto y seguro que Java en este aspecto para evitar errores sutiles.
+Es casi una ironía siendo su código más sucinto, pero Kotlin es más estricto y seguro que Java en este aspecto para evitar errores sutiles.
 
 En **Java**, las conversiones de un tipo numérico "más pequeño" a uno "más grande" (ej. `int` a `long`) son implícitas. En **Kotlin**, toda conversión de tipo debe ser **explícita**. Esto previene la pérdida accidental de información y hace el código más claro.
 
@@ -449,3 +451,18 @@ val numeroDesdeTexto: Int = texto.toInt()
 ```
 
 Esta "molestia" inicial es en realidad una gran ventaja. Obliga al programador a ser consciente de las conversiones que realiza, lo que conduce a un código más robusto y con menos errores inesperados.
+
+### 13. Lecturas obligatorias I
+
+Muchas cosas se han visto en esta presentación, pero revisando las fuentes originales se asientan mejor los conceptos. Asegurate de leer las siguientes secciones de la guía de Develou antes de continuar:
+
+- Introducción A Kotlin
+- Hola Mundo En Kotlin
+- Flujo De Entrada Y Salida En Kotlin
+- Variables
+- Tipos Primitivos En Kotlin
+- Strings En Kotlin
+- Arrays
+- Conversión de tipos
+
+
