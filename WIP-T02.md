@@ -1,20 +1,20 @@
 # T02-Introducción a Kotlin
 
-## Crash Course para Alumnos de Java - Índice
+## Índice - Crash Course para Alumnos de Java
 
 - [Introducción](#introducción)
 - [1. La función main()](#1-la-función-main)
 - [2. Sacando información por pantalla: print y println](#2-sacando-información-por-pantalla-print-y-println)
 - [3. Nomenclatura: Naming Conventions](#3-nomenclatura-naming-conventions)
-- [4. Manejo de Strings: Más allá de Java](#4-manejo-de-strings-más-allá-de-java)
+- [4. Manejo de Strings](#4-manejo-de-strings)
 - [5. Mutabilidad: val vs. var](#5-mutabilidad-val-vs-var)
-  - [6. Sistema de tipos e inferencia](#6-sistema-de-tipos-e-inferencia)
-- [7. Ejercicios propuestos - I](#7-ejercicios-propuestos-i)
-- [Flujo de Entrada y Salida (I/O)](#flujo-de-entrada-y-salida-io)
+- [6. Sistema de tipos e inferencia](#6-sistema-de-tipos-e-inferencia)
+- [7. Ejercicios propuestos I](#7-ejercicios-propuestos-i)
+- [8. Flujo de Entrada y Salida (I/O)](#8-flujo-de-entrada-y-salida-io)
 - [9. Variables (val y var) - Profundizando](#9-variables-val-y-var-profundizando)
 - [10. Tipos de Datos: Primitivos o no?](#10-tipos-de-datos-primitivos-o-no)
 - [11. Arrays y Strings](#11-arrays-y-strings)
-- [12. Conversión de Tipos (Casting)](#12-conversion-de-tipos-casting)
+- [12. Conversión de Tipos (Casting)](#12-conversión-de-tipos-casting)
 - [13. Lecturas obligatorias I](#13-lecturas-obligatorias-i)
 - [14. Anulabilidad y Seguridad de Nulos](#14-anulabilidad-y-seguridad-de-nulos)
   - [Herramientas para manejar nulos](#herramientas-para-manejar-nulos)
@@ -194,7 +194,7 @@ Aquí puedes tranquilizarles: las convenciones son prácticamente idénticas a l
 
 -----
 
-### 4. Manejo de Strings: Más allá de Java
+### 4. Manejo de Strings
 
 Aquí es donde Kotlin empieza a brillar de verdad para los que vienen de Java. Esta parte era un dolor de muelas en Java y Kotlin lo hace mucho más sencillo e intuitivo, similar a las string templates de JavaScript o Python.
 
@@ -336,7 +336,7 @@ En el caso de `Byte` y `Short`, no existen sufijos de literal, por lo que siempr
 
 Insistir que la inferencia de tipos no hace que Kotlin sea "débilmente tipado" como Python o JavaScript. El tipo sigue estando ahí, es inmutable y se comprueba en compilación, lo que nos da la seguridad de Java con la verbosidad reducida de un lenguaje de scripting.
 
-### 7. Ejercicios propuestos - I
+### 7. Ejercicios propuestos I
 
 #### Ejercicio 0: Setup del entorno
 
@@ -366,7 +366,7 @@ Empaqueta todo en una función `ejercicio2()` y llámala desde `main()`.
 
 -----
 
-### Flujo de Entrada y Salida (I/O)
+### 8. Flujo de Entrada y Salida (I/O)
 
 Mientras que en **Java** se necesita un objeto `Scanner` para leer desde la consola, Kotlin lo simplifica enormemente.
 
@@ -394,7 +394,7 @@ fun main() {
 
 -----
 
-### 9. Variables (`val` y `var`) - Profundizando
+### 9. Variables `val` y `var` Profundizando
 
 Ya introdujimos `val` y `var`, pero un punto clave que confunde a los que vienen de Java es la diferencia entre **referencia inmutable y objeto inmutable**.
 
