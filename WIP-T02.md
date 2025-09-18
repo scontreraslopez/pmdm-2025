@@ -545,7 +545,7 @@ val longitud = nombreProfesor?.length ?: 0
 println("La longitud del nombre es $longitud") // Imprime "La longitud del nombre es 0"
 ```
 
-#### **3. El Operador de Aserción No Nula (`!!`)**
+##### **3. El Operador de Aserción No Nula (`!!`)**
 
 Esta es la opción más arriesgada y la que más se parece al comportamiento de Java. Le dice al compilador: "Te aseguro que esta variable no es nula aquí. Confía en mí y déjame usarla" **Trust me bro**. Si te equivocas y la variable es `null`, **la aplicación se romperá con un `KotlinNullPointerException`**.
 
@@ -559,7 +559,7 @@ val direccionNula: String? = null
 
 El operador `!!` es lo que llamos un **code smell**, algo que pinta mal. Por lo general **evitad el operador `!!` siempre que sea posible**. Su uso es considerado una mala práctica y a menudo indica que la lógica del programa podría mejorarse usando llamadas seguras u operadores Elvis. Es una "salida de emergencia", no una herramienta de uso diario.
 
-#### **4. `Smart Casts` (Conversiones Inteligentes)**
+##### **4. `Smart Casts` (Conversiones Inteligentes)**
 
 El compilador de Kotlin es lo suficientemente inteligente como para saber que si has comprobado que una variable no es nula, dentro de ese bloque de código, puede tratarla como si fuera no nulable, sin necesidad de operadores.
 
