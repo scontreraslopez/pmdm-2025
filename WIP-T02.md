@@ -336,13 +336,13 @@ En el caso de `Byte` y `Short`, no existen sufijos de literal, por lo que siempr
 
 Insistir que la inferencia de tipos no hace que Kotlin sea "débilmente tipado" como Python o JavaScript. El tipo sigue estando ahí, es inmutable y se comprueba en compilación, lo que nos da la seguridad de Java con la verbosidad reducida de un lenguaje de scripting.
 
-### 7. Ejercicios propuestos I
+### 7. Ejercicios propuestos I 🚨
 
 #### Ejercicio 0: Setup del entorno
 
 1. Instala Android Studio (si no lo tienes ya).
 2. Crea un nuevo proyecto Android con una Activity vacía.
-3. Añade un nuevo fichero Kotlin `EjerciciosT02` en el directorio.
+3. Añade un nuevo fichero Kotlin (por ejemplo `EjerciciosT02` o `Main.kt`) en el directorio.
 4. Crea un repo privado en GitHub dentro de tu organización de Móvil 2025.
 5. Configura el remote, la autenticación.
 
@@ -471,7 +471,7 @@ val numeroDesdeTexto: Int = texto.toInt()
 
 Esta "molestia" inicial es en realidad una gran ventaja. Obliga al programador a ser consciente de las conversiones que realiza, lo que conduce a un código más robusto y con menos errores inesperados.
 
-### 13. Lecturas obligatorias I
+### 13. Lecturas obligatorias I 🚨
 
 Muchas cosas se han visto en esta presentación, pero revisando las fuentes originales se asientan mejor los conceptos. Asegurate de leer las siguientes secciones de la guía de Develou antes de continuar:
 
