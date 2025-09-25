@@ -242,6 +242,146 @@ val esPalindromo = palabra.esPalindromo() // true
 
 ## 8. Otros conceptos avanzados
 
-Las funciones de Kotlin tienen muchas más características avanzadas, como las funciones inline, las funciones tail-recursive, las funciones locales (funciones anidadas). Estas características permiten optimizar el rendimiento, evitar desbordamientos de pila y organizar mejor el código. Sin embargo, estas características son más avanzadas y se pueden explorar en profundidad en etapas posteriores del aprendizaje de Kotlin.
+Las funciones de Kotlin tienen muchas más características avanzadas, como las funciones inline, las funciones tail-recursive, las funciones locales (funciones anidadas), funciones con generics. Estas características permiten optimizar el rendimiento, evitar desbordamientos de pila y organizar mejor el código. Sin embargo, estas características son más avanzadas y se pueden explorar en profundidad en etapas posteriores del aprendizaje de Kotlin.
 
-## Ejercicios autocorregibles de comprensión de firmas y funciones en Kotlin
+## Ejercicios Autocorregibles: Lectura de Funciones en Kotlin
+
+### Nivel 1: Fundamentos (Parámetros y Llamadas)
+
+**1. Parámetros por defecto.** Dada la siguiente función:
+
+```kotlin
+fun crearAlerta(mensaje: String, esError: Boolean = false, duracion: Int = 3000) { /* ... */ }
+```
+
+¿Cuál de las siguientes llamadas es **INVÁLIDA**?
+a) `crearAlerta("Todo OK")`
+b) `crearAlerta("Fallo de red", true)`
+c) `crearAlerta("Archivo no encontrado", duracion = 5000)`
+d) `crearAlerta(true, "Fallo grave")`
+
+-----
+
+**2. Parámetros con nombre.** Tienes esta función:
+
+```kotlin
+fun configurarGrafico(titulo: String, colorEjes: String = "#000000", mostrarLeyenda: Boolean) { /* ... */ }
+```
+
+¿Cómo la llamarías para configurar un gráfico con el título "Ventas 2025" y `mostrarLeyenda` a `true`, pero manteniendo el color de ejes por defecto? Escribe la llamada a la función.
+
+-----
+
+**3. Nulos vs. Opcionales.** Observa estas dos firmas:
+
+```kotlin
+// Firma A
+fun buscarUsuario(id: Int?) { /* ... */ }
+
+// Firma B
+fun obtenerConfig(version: Int = 1) { /* ... */ }
+```
+
+¿Cuál de las siguientes afirmaciones es **CORRECTA**?
+a) En la Firma A, el parámetro `id` es opcional.
+b) En la Firma B, el parámetro `version` puede ser `null`.
+c) En la Firma A, el parámetro `id` puede ser `null`, pero es obligatorio pasarlo.
+d) La llamada `obtenerConfig(null)` es válida.
+
+-----
+
+### Nivel 2: Sintaxis Elegante (One-Liners y Extensiones)
+
+**4. One-Liners.** Reescribe la siguiente función usando la sintaxis de una sola línea:
+
+```kotlin
+fun esPositivo(numero: Int): Boolean {
+    return numero > 0
+}
+```
+
+-----
+
+**5. Funciones de Extensión.** Dada la siguiente función de extensión:
+
+```kotlin
+fun String.conEspacios(): String {
+    return this.toList().joinToString(" ")
+}
+```
+
+¿Qué imprimirá por pantalla la siguiente línea de código? `println("HOLA".conEspacios())`
+
+-----
+
+### Nivel 3: Lectura de Lambdas
+
+*Contexto: En Jetpack Compose, casi todo lo que se muestra en pantalla es una función que recibe datos y, a menudo, otras funciones (lambdas) para definir su contenido o su comportamiento.*
+
+**6. Identificando el tipo de un parámetro.** En la firma de un botón de Compose, ves esto:
+
+```kotlin
+fun Button(onClick: () -> Unit) { /* ... */ }
+```
+
+El parámetro `onClick` es:
+a) Un `String`
+b) Un `Boolean`
+c) Una función que no recibe parámetros y no devuelve nada (`Unit`).
+d) Un objeto de tipo `Unit`.
+
+-----
+
+**7. Entendiendo el contenido de un Composable.** La firma de un contenedor básico en Compose es:
+
+```kotlin
+fun Box(modifier: Modifier, content: @Composable () -> Unit) { /* ... */ }
+```
+
+¿Qué se le pasa al parámetro `content`?
+a) Un objeto de cualquier tipo con el contenido a mostrar.
+b) Otra función Composable que definirá lo que se dibuja *dentro* del `Box`.
+c) Un número que indica el tamaño.
+d) Un texto que se mostrará como etiqueta.
+
+-----
+
+**8. Relaciona la llamada con su firma.** Une cada llamada (A, B, C) con la firma de función correcta (1, 2, 3):
+
+**Llamadas:**
+
+  - **A**: `Listado(items) { item -> Text(item.nombre) }`
+  - **B**: `Listado(items)`
+  - **C**: `Listado { Text("Lista vacía") }`
+
+**Firmas:**
+
+  - **1**: `fun Listado(items: List<Item>)`
+  - **2**: `fun Listado(contenidoVacio: @Composable () -> Unit)`
+  - **3**: `fun Listado(items: List<Item>, itemContent: @Composable (Item) -> Unit)`
+
+-----
+
+<br>
+
+## ✅ Soluciones
+
+1.  **Respuesta: d) `crearAlerta(true, "Fallo grave")`**. Es inválida porque los argumentos se pasan en el orden incorrecto. `true` es un `Boolean` y `esError` es el segundo parámetro, pero la función espera un `String` como primer parámetro. Las llamadas a), b) y c) son correctas porque respetan el orden o usan parámetros con nombre.
+
+2.  **Respuesta:** `configurarGrafico(titulo = "Ventas 2025", mostrarLeyenda = true)`. Al usar parámetros con nombre, podemos omitir el parámetro opcional `colorEjes` que está en medio y hacer el código mucho más legible.
+
+3.  **Respuesta: c) En la Firma A, el parámetro `id` puede ser `null`, pero es obligatorio pasarlo.** El `?` indica que acepta `null` (**nullable**), pero al no tener un valor por defecto, no es opcional. En la Firma B, `version` es opcional, pero no nullable.
+
+4.  **Respuesta:** `fun esPositivo(numero: Int): Boolean = numero > 0`
+
+5.  **Respuesta:** `H O L A`. La función de extensión convierte la `String` "HOLA" en una lista de caracteres (`['H', 'O', 'L', 'A']`) y luego los une de nuevo en una `String`, pero separándolos con un espacio.
+
+6.  **Respuesta: c) Una función que no recibe parámetros y no devuelve nada (`Unit`).** La firma `() -> Unit` define una acción o evento. Es el patrón típico para los callbacks como `onClick`.
+
+7.  **Respuesta: b) Otra función Composable que definirá lo que se dibuja *dentro* del `Box`.** El parámetro `content` es una lambda Composable. Esto permite anidar componentes: `Box { Text("Hola") }`.
+
+8.  **Respuesta:**
+
+      * **A -\> 3**: Se pasa la lista de ítems y una lambda para definir cómo se dibuja cada ítem.
+      * **B -\> 1**: Solo se pasa la lista de ítems; la función probablemente tenga una forma por defecto de dibujarlos.
+      * **C -\> 2**: No se pasan ítems, solo una lambda para definir qué mostrar en su lugar (por ejemplo, cuando la lista está vacía).
