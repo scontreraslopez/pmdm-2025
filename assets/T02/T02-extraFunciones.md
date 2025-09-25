@@ -206,27 +206,7 @@ switchNotificaciones.setOnCheckedChangeListener { _, isChecked ->
 
 Aquí Android nos obliga a recibir dos parámetros en el listener, pero solo nos interesa el segundo (isChecked). Usamos `_` para ignorar el primero y dejamos claro que no lo necesitamos. Esto adelanta alguna cosa, pero así os va sonando cuando nos toque utilizarlo en el curso.
 
-## 6. Funciones infix
-
-Kotlin permite definir funciones infix, que se pueden llamar sin el punto y los paréntesis, lo que mejora la legibilidad en ciertos casos. Para declarar una función infix, debe ser una función miembro o una función de extensión con un solo parámetro.
-
-```kotlin
-class Punto(val x: Int, val y: Int) {
-    infix fun mover(direccion: String): Punto {
-        return when (direccion) {
-            "arriba" -> Punto(x, y + 1)
-            "abajo" -> Punto(x, y - 1)
-            "izquierda" -> Punto(x - 1, y)
-            "derecha" -> Punto(x + 1, y)
-            else -> this
-        }
-    }
-}
-val punto = Punto(0, 0)
-val nuevoPunto = punto mover "arriba" // Llamada infix
-```
-
-## 7. Funciones de extensión
+## 6. Funciones de extensión
 
 Kotlin permite añadir nuevas funciones a clases existentes sin necesidad de heredar de ellas o usar patrones como el decorador. Esto se logra mediante las funciones de extensión.
 
@@ -240,9 +220,9 @@ val palabra = "Anita lava la tina"
 val esPalindromo = palabra.esPalindromo() // true
 ```
 
-## 8. Otros conceptos avanzados
+## 7. Otros conceptos avanzados
 
-Las funciones de Kotlin tienen muchas más características avanzadas, como las funciones inline, las funciones tail-recursive, las funciones locales (funciones anidadas), funciones con generics. Estas características permiten optimizar el rendimiento, evitar desbordamientos de pila y organizar mejor el código. Sin embargo, estas características son más avanzadas y se pueden explorar en profundidad en etapas posteriores del aprendizaje de Kotlin.
+Las funciones de Kotlin tienen muchas más características avanzadas, como las funciones inline, las funciones infix, las funciones tail-recursive, las funciones locales (funciones anidadas), funciones con generics. Estas características permiten optimizar el rendimiento, evitar desbordamientos de pila y organizar mejor el código. Sin embargo, estas características son más avanzadas y se pueden explorar en profundidad en etapas posteriores del aprendizaje de Kotlin.
 
 ## Ejercicios Autocorregibles: Lectura de Funciones en Kotlin
 
