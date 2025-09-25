@@ -187,24 +187,19 @@ val soloPrimero = { x: Int, _: Int -> x * 2 } // El segundo parámetro se ignora
 Este ejemplo puede parecer un poco pobre, pero es muy habitual en callbacks donde no siempre necesitamos todos los parámetros que se nos pasan. Como en los listeners de eventos en Android, donde a veces solo nos interesa el evento y no el objeto que lo genera.
 
 ```kotlin
-// Asumimos que tenemos un Switch en nuestra vista
-val switchNotificaciones = findViewById<Switch>(R.id.mi_switch)
+@Composable
+fun ListaUsuarios() {
+    val usuarios = listOf("Ana", "Luis", "María")
 
-// La firma del listener nos obliga a recibir la vista y el booleano.
-// Usamos '_' para ignorar el primer parámetro (la vista), que no necesitamos.
-// Dejamos claro que solo nos interesa el segundo parámetro (isChecked).
-switchNotificaciones.setOnCheckedChangeListener { _, isChecked ->
-    if (isChecked) {
-        activarNotificaciones()
-        println("Notificaciones activadas")
-    } else {
-        desactivarNotificaciones()
-        println("Notificaciones desactivadas")
+    LazyColumn {
+        itemsIndexed(usuarios) { _, usuario ->
+            Text(text = usuario)
+        }
     }
 }
 ```
 
-Aquí Android nos obliga a recibir dos parámetros en el listener, pero solo nos interesa el segundo (isChecked). Usamos `_` para ignorar el primero y dejamos claro que no lo necesitamos. Esto adelanta alguna cosa, pero así os va sonando cuando nos toque utilizarlo en el curso.
+Aquí Android nos obliga a recibir dos parámetros en el listener, index y usuario, pero solo nos interesa el usuario, así que usamos `_` para ignorar el índice. Podríamos nombrarla y no usarla, pero es una convención común usar `_` para indicar que no nos importa ese parámetro y así no se queja el compilador (warning variable no usada).
 
 ## 6. Funciones de extensión
 
