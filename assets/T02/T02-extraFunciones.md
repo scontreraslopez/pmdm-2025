@@ -235,10 +235,11 @@ fun crearAlerta(mensaje: String, esError: Boolean = false, duracion: Int = 3000)
 ```
 
 ¿Cuál de las siguientes llamadas es **INVÁLIDA**?
-a) `crearAlerta("Todo OK")`
-b) `crearAlerta("Fallo de red", true)`
-c) `crearAlerta("Archivo no encontrado", duracion = 5000)`
-d) `crearAlerta(true, "Fallo grave")`
+
+- a) `crearAlerta("Todo OK")`
+- b) `crearAlerta("Fallo de red", true)`
+- c) `crearAlerta("Archivo no encontrado", duracion = 5000)`
+- d) `crearAlerta(true, "Fallo grave")`
 
 -----
 
@@ -263,10 +264,11 @@ fun obtenerConfig(version: Int = 1) { /* ... */ }
 ```
 
 ¿Cuál de las siguientes afirmaciones es **CORRECTA**?
-a) En la Firma A, el parámetro `id` es opcional.
-b) En la Firma B, el parámetro `version` puede ser `null`.
-c) En la Firma A, el parámetro `id` puede ser `null`, pero es obligatorio pasarlo.
-d) La llamada `obtenerConfig(null)` es válida.
+
+- a) En la Firma A, el parámetro `id` es opcional.
+- b) En la Firma B, el parámetro `version` puede ser `null`.
+- c) En la Firma A, el parámetro `id` puede ser `null`, pero es obligatorio pasarlo.
+- d) La llamada `obtenerConfig(null)` es válida.
 
 -----
 
@@ -305,10 +307,11 @@ fun Button(onClick: () -> Unit) { /* ... */ }
 ```
 
 El parámetro `onClick` es:
-a) Un `String`
-b) Un `Boolean`
-c) Una función que no recibe parámetros y no devuelve nada (`Unit`).
-d) Un objeto de tipo `Unit`.
+
+- a) Un `String`
+- b) Un `Boolean`
+- c) Una función que no recibe parámetros y no devuelve nada (`Unit`).
+- d) Un objeto de tipo `Unit`.
 
 -----
 
@@ -319,10 +322,11 @@ fun Box(modifier: Modifier, content: @Composable () -> Unit) { /* ... */ }
 ```
 
 ¿Qué se le pasa al parámetro `content`?
-a) Un objeto de cualquier tipo con el contenido a mostrar.
-b) Otra función Composable que definirá lo que se dibuja *dentro* del `Box`.
-c) Un número que indica el tamaño.
-d) Un texto que se mostrará como etiqueta.
+
+- a) Un objeto de cualquier tipo con el contenido a mostrar.
+- b) Otra función Composable que definirá lo que se dibuja *dentro* del `Box`.
+- c) Un número que indica el tamaño.
+- d) Un texto que se mostrará como etiqueta.
 
 -----
 
