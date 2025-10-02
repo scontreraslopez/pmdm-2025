@@ -184,7 +184,7 @@ Y de manera similar a las llamadas por nombre en las que podemos omitir alguno d
 val soloPrimero = { x: Int, _: Int -> x * 2 } // El segundo parámetro se ignora
 ```
 
-Este ejemplo puede parecer un poco pobre, pero es muy habitual en callbacks donde no siempre necesitamos todos los parámetros que se nos pasan. Como en los listeners de eventos en Android, donde a veces solo nos interesa el evento y no el objeto que lo genera.
+Este ejemplo puede parecer un poco pobre, pero es muy habitual en callbacks donde no siempre necesitamos todos los parámetros que se nos pasan.
 
 ```kotlin
 @Composable
@@ -199,7 +199,7 @@ fun ListaUsuarios() {
 }
 ```
 
-Aquí Android nos obliga a recibir dos parámetros en el listener, index y usuario, pero solo nos interesa el usuario, así que usamos `_` para ignorar el índice. Podríamos nombrarla y no usarla, pero es una convención común usar `_` para indicar que no nos importa ese parámetro y así no se queja el compilador (warning variable no usada).
+Aquí para `itemsIndexed` Android nos obliga a pasarle (entre otros parámetros) una función con dos parámetros (`index` e `item`). Para esto usamos nuestro lambda, pero, cómo sólo nos interesa el usuario usamos `_` para ignorar el índice. Podríamos nombrarla y no usarla, pero es una convención común usar `_` para indicar que no nos importa ese parámetro y así no se queja el compilador (warning variable no usada).
 
 ## 6. Funciones de extensión
 
