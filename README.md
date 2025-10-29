@@ -61,7 +61,11 @@ Hacer esto es el equivalente académico y profesional a rendirse.
 
 ### 4. Como usarla en Android Studio
 
-No hay necesidad de sufrir copiando y pegando retales de código en chatGPT, Android Studio lo tiene ya integrado
+No hay necesidad de sufrir copiando y pegando retales de código en chatGPT, Android Studio lo tiene ya integrado.
+
+Aquí tienes unas instrucciones sencillas:
+
+![Instrucciones Gemini](img/T00/gemini.png)
 
 > [!WARNING]
 > Aviso a navegantes: En el examen no hay internet, por lo que no podréis usar la IA. Este documento es para las prácticas y el aprendizaje.
