@@ -70,6 +70,43 @@ Aquí tienes unas instrucciones sencillas:
 > [!WARNING]
 > Aviso a navegantes: En el examen no hay internet, por lo que no podréis usar la IA. Este documento es para las prácticas y el aprendizaje.
 
+```mermaid
+%% Flujo de trabajo del Desarrollador Competente con IA
+graph TD
+    style A fill:#D6EAF8,stroke:#333,stroke-width:2px
+    style P fill:#D5F5E3,stroke:#333,stroke-width:2px
+    style H fill:#FCF3CF,stroke:#333,stroke-width:1px
+    style L fill:#FCF3CF,stroke:#333,stroke-width:1px
+
+    A[Inicio: Nueva Tarea / Problema] --> B(1. Intento resolverlo yo mismo)
+
+    subgraph "Ciclo de Desarrollo Principal"
+        B -- "Mientras programo" --> C{¿Sugerencia Inline útil?}
+        C -- "Sí (Tab) y la entiendo" --> D[Avanzo código]
+        C -- "No (Ignoro)" --> D
+        D --> E{¿Funciona? 🤔}
+        E -- "No" --> F[2. Busco en Internet / Docs 🌐]
+        F --> G{¿Sigo atascado? 😫}
+        G -- "No, encontré la solución" --> B
+        E -- "Si" --> K[🎉 Codigo Funcional v1 ] 
+    end
+
+    %% Rama de Desbloqueo por IA
+    G -- "Sí (Tras esfuerzo real)" --> H[3. Pregunto a la IA - Modo 'Ask' 🤖]
+    H --> I[Analizo y entiendo la explicación]
+    I --> J[Implemento la solución entendida]
+    J --> K
+
+    subgraph "Ciclo de Refinamiento (Opcional)"
+        K --> L[4. Pido a la IA que revise/mejore 🧐]
+        L --> M{¿Sugerencia válida y alineada?}
+        M -- "Sí" --> N[Implemento la mejora ✅]
+        M -- "No" --> O[Ignoro la sugerencia ❌]
+        N --> P[🏆 Fin de la Tarea]
+        O --> P
+    end
+```
+
 ---
 
 ### 5. Conclusión
