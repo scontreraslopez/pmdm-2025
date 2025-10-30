@@ -111,7 +111,7 @@ graph TD
 
 ### 5. Conclusión
 
-La IA es una herramienta, no un sustituto de tu cerebro. Trátala como el asistente increíblemente rápido pero que necesita dirección que es.
+La IA es una herramienta, no un sustituto de tu capacidad. Trátala como el asistente increíblemente rápido que es, pero no olvides que necesita supervisión constante.
 
 El desarrollador eres tú. La responsabilidad es tuya. El aprendizaje es tuyo.
 
