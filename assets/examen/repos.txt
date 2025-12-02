@@ -1,0 +1,15 @@
+https://github.com/freeCodeCamp/freeCodeCamp
+https://github.com/EbookFoundation/free-programming-books
+https://github.com/jwasham/coding-interview-university
+https://github.com/sindresorhus/awesome
+https://github.com/kamranahmedse/developer-roadmap
+https://github.com/public-apis/public-apis
+https://github.com/donnemartin/system-design-primer
+https://github.com/facebook/react
+https://github.com/tensorflow/tensorflow
+https://github.com/twbs/bootstrap
+https://github.com/Kanaries/pygwalker
+https://github.com/Kanaries/Rath
+https://github.com/lucidrains/PaLM-rlhf-pytorch
+https://github.com/apidogio/apidog
+https://github.com/puppeteer/puppeteer
